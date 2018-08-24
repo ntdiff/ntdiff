@@ -1,9 +1,9 @@
 [submodule "Output"]
 	path = Output
-	url = ../headers.git
+	url = git@github.com:ntdiff/headers.git
 [submodule "web"]
 	path = web
-	url = ../web.git
+	url = git@github.com:ntdiff/web.git
 [submodule "web-mergely"]
 	path = web-mergely
-	url = ../../ntdiff-mergely/web-mergely.git
+	url = git@github.com:ntdiff-mergely/web-mergely.git
