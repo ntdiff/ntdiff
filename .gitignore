@@ -1,0 +1,7 @@
+.vscode/**
+.idea/**
+
+*.exe
+*.dll
+*.pdb
+*.yes
