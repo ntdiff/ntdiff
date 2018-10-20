@@ -4,6 +4,3 @@
 [submodule "web"]
 	path = web
 	url = git@github.com:ntdiff/web.git
-[submodule "web-mergely"]
-	path = web-mergely
-	url = git@github.com:ntdiff-mergely/web-mergely.git
