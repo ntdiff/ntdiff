@@ -192,7 +192,7 @@ def main():
             #
             # Parse string in format: 'kind _TYPENAME;'
             #
-            kind, type_name = type.decode('ascii').split(' ')
+            kind, type_name = type.decode('ascii').split(' ', 1)
             type_name = type_name.rstrip(';')
 
             if type_name not in type_set:
