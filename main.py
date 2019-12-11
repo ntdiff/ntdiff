@@ -117,7 +117,7 @@ def main():
         )
 
         version = get_pe_version(pair.bin_path)
-        _, system, arch, _, _ = pdb_path.split('\\')
+        _, system, arch, _ = pdb_path.split('\\', 3)
         version = '{}-{} ({})'.format(system, arch, version)
 
         if version not in version_set:
@@ -134,11 +134,13 @@ def main():
         os.makedirs(os.path.dirname(pdb_path), exist_ok=True)
         shutil.copy(pair.pdb_path, pdb_path)
 
+        dest_path = re.sub('\\\\system32\\\\drivers\\\\', '\\\\System32\\\\', pdb_path, flags=re.I)
+
         dest_dir = os.path.join(
             script_dir,
             'Output',
             os.path.relpath(
-                os.path.dirname(pdb_path),
+                os.path.dirname(dest_path),
                 'PDB'
             ),
             os.path.splitext(os.path.basename(pdb_path))[0]

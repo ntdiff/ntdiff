@@ -4,5 +4,6 @@ _Old/**
 
 *.exe
 *.dll
+*.sys
 *.pdb
 *.yes
